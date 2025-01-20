@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # Backend Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - DATABASE_URL=postgresql://user:password@db:5432/ndc14_db?sslmode=require
+      - SECRET=SECRET_KEY_FOR_JWT_TOKEN
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - ndc14-network
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - PORT=4000
+      - VITE_API_URL=http://localhost:8080
+      - 
+    ports:
+      - "4000:4000"
+    depends_on:
+      - backend
+    networks:
+      - ndc14-network
+
+  # PostgreSQL Service
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=ndc14_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - ndc14-network
+
+# Volumes for persistence
+volumes:
+  postgres_data:
+
+# Networks for communication between services
+networks:
+  ndc14-network:
+    driver: bridge

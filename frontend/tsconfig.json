@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "allowJs": true, // Allow JavaScript files in the project
+        "checkJs": true, // Enable type-checking for JavaScript files
+        "esModuleInterop": true, // Enable ES module interop
+        "forceConsistentCasingInFileNames": true, // Enforce consistent casing in imports
+        "resolveJsonModule": true, // Allow importing JSON modules
+        "skipLibCheck": true, // Skip type checking of declaration files
+        "sourceMap": true, // Generate source maps for debugging
+        "strict": true, // Enable strict type-checking
+        "baseUrl": ".", // Base URL for module resolution
+        "paths": {
+            "$lib/*": ["src/lib/*"], // Alias for SvelteKit's $lib
+            "$components/*": ["src/components/*"], // Alias for components folder
+            "$utils/*": ["src/utils/*"], // Alias for utility functions
+            "$stores/*": ["src/stores/*"], // Alias for Svelte stores
+            "$styles/*": ["src/styles/*"] // Alias for global or reusable styles
+        },
+        "outDir": "./dist" // Output directory for compiled files
+    },
+    "include": [
+        "src/**/*.ts", // Include TypeScript files in the `src` directory
+        "src/**/*.js", // Include JavaScript files in the `src` directory
+        "src/**/*.svelte" // Include Svelte files
+    ],
+    "exclude": [
+        "node_modules", // Exclude dependencies
+        "dist", // Exclude output directory
+        "svelte.config.js", // Exclude Svelte config file
+        "vite.config.js", // Exclude Vite config file
+        "*.js" // Exclude top-level JavaScript files
+    ]
+}

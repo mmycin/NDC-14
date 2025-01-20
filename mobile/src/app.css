@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url("/harrington.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #1a202c; /* Default text color */
+}
+body.dark {
+    color: #f7fafc; /* Text color for dark mode */
+}
+
+/* Base Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Hover Effects */
+.hover:scale-105:hover {
+    transform: scale(1.05);
+}
+
+/* Pagination Button Styling */
+/* Pagination Button Styling */
+button {
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Page Number Styling */
+span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e5e7eb; /* Gray */
+}
+
+/* app.css */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f7fafc; /* Soft gray background */
+}
+
+h1,
+h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-gray-100 {
+    background-color: #f7fafc; /* Light gray background */
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transition-transform {
+    transition: transform 0.3s;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.leading-relaxed {
+    line-height: 1.6;
+}
+
+.text-blue-800 {
+    color: #1e3a8a; /* Dark blue for headings */
+}
+
+.text-gray-600 {
+    color: #4a5568; /* Gray color for subtitles */
+}
+
+.text-gray-500 {
+    color: #6b7280; /* Medium gray for date */
+}
+
+.text-gray-700 {
+    color: #374151; /* Dark gray for content text */
+}
+
+.text-gray-900 {
+    color: #111827; /* Very dark gray for footer text */
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,1 @@
+import{T as s}from"./NQglOQBo.js";function r(o,t="success"){s({text:o,duration:3e3,gravity:"bottom",position:"right",backgroundColor:t==="success"?"#28a745":"#dc3545",stopOnFocus:!0,onClick:function(){},style:{borderRadius:"8px",padding:"12px 24px"}}).showToast()}export{r as N};

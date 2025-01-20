@@ -1,0 +1,28 @@
+{
+	"/": [],
+	"/contact": [],
+	"/dashboard": [],
+	"/dashboard/account": [],
+	"/dashboard/account/edit": [],
+	"/dashboard/messages": [],
+	"/dashboard/messages/[slug]": [
+		"src/routes/dashboard/messages/[slug]/+page.ts"
+	],
+	"/dashboard/notices": [],
+	"/dashboard/notices/add": [],
+	"/dashboard/notices/edit": [],
+	"/dashboard/notices/edit/[slug]": [
+		"src/routes/dashboard/notices/edit/[slug]/+page.ts"
+	],
+	"/dashboard/notices/[slug]": [
+		"src/routes/dashboard/notices/[slug]/+page.ts"
+	],
+	"/dashboard/users": [],
+	"/dashboard/users/add": [],
+	"/dashboard/users/edit": [],
+	"/dashboard/users/[slug]": [
+		"src/routes/dashboard/users/[slug]/+page.ts"
+	],
+	"/login": [],
+	"/logout": []
+}
