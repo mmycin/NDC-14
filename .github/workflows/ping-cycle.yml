@@ -1,4 +1,4 @@
-name: Ping Cycle (15 min on, 8 min off every hour)
+name: Ping Cycle (10 min on, 15 min off every hour)
 
 on:
   schedule:
@@ -23,19 +23,19 @@ jobs:
           )
 
           # Define cycle length (23 minutes)
-          cycle_length=23
+          cycle_length=25
           cycle_period=$((current_time % cycle_length))  # Calculate current cycle period
 
-          # 15 minutes of "on" period (pinging)
-          if [ $cycle_period -lt 15 ]; then
-            echo "Pinging for 15 minutes..."
+          # 10 minutes of "on" period (pinging)
+          if [ $cycle_period -lt 10 ]; then
+            echo "Pinging for 10 minutes..."
             for url in "${urls[@]}"
             do
               echo "Pinging $url..."
               curl -s $url > /dev/null
             done
           else
-            # 8 minutes of "off" period (sleeping)
-            echo "Sleeping for 8 minutes..."
+            # 15 minutes of "off" period (sleeping)
+            echo "Sleeping for 15 minutes..."
             sleep 60  # Sleep for 1 minute (GitHub Actions runs every minute)
           fi
