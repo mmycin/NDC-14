@@ -104,11 +104,11 @@ func UpdateNotice(c *gin.Context) {
 		}
 
 		// Only keep the last file from the updated notice.Files list
-		lastFile := notice.Files[len(notice.Files)-1]
+		lastFile := notice.Files[len(notice.Files) - 1]
 		fmt.Println("Last file to keep:", lastFile)
 
 		// Empty the files array and add only the last file
-		notice.Files = []models.File{lastFile}
+		notice.Files = []models.File{ lastFile }
 		fmt.Println("Updated files list:", notice.Files)
 	}
 
